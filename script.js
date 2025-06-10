@@ -465,3 +465,71 @@ enhanceFormValidation();
 
 console.log('🌸 KODAKASOFT website loaded successfully! 🌸');
 console.log('Made with ❤️ and Japanese precision');
+
+// Mejorar manejo del menú móvil
+function handleMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const body = document.body;
+    let isMenuOpen = false;
+
+    function toggleMenu(event) {
+        event.stopPropagation(); // Prevenir propagación del evento
+        isMenuOpen = !isMenuOpen;
+        mobileMenuBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        body.style.overflow = isMenuOpen ? 'hidden' : '';
+        
+        // Añadir/remover clase para el botón
+        if (isMenuOpen) {
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        } else {
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    // Event listener para el botón de menú
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+
+    // Cerrar menú al hacer click en enlaces
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (isMenuOpen) {
+                toggleMenu({ stopPropagation: () => {} });
+            }
+        });
+    });
+
+    // Cerrar menú al hacer click fuera
+    document.addEventListener('click', (e) => {
+        if (isMenuOpen && !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            toggleMenu({ stopPropagation: () => {} });
+        }
+    });
+
+    // Evitar que clicks dentro del menú cierren el menú
+    mobileMenu.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    // Cerrar menú al redimensionar ventana
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768 && isMenuOpen) {
+            toggleMenu({ stopPropagation: () => {} });
+        }
+    });
+
+    // Escape key para cerrar el menú
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isMenuOpen) {
+            toggleMenu({ stopPropagation: () => {} });
+        }
+    });
+}
+
+// Inicializar el menú móvil
+document.addEventListener('DOMContentLoaded', handleMobileMenu);
+
+// Ejecutar optimizaciones móviles
+window.addEventListener('load', optimizeForMobile);
+window.addEventListener('resize', optimizeForMobile);
