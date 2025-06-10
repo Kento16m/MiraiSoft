@@ -3,505 +3,975 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MiraiSoft - Creamos sitios web modernos, futuristas y optimizados para SEO. Diseño web profesional con esencia japonesa.">
-    <meta name="keywords" content="diseño web, desarrollo web, sitios web, MiraiSoft, futurista, japonés">
-    <title>MiraiSoft | 未来のウェブデザイン | Web-Design</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>KODAKASOFT - Desarrollo Web Profesional</title>
+    <meta name="description" content="KODAKASOFT - Desarrollo web profesional con estética japonesa. Creamos sitios web elegantes y funcionales.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Pantalla de carga -->
-    <div class="loader-container">
-        <div class="loader">
-            <div class="loader-logo">
-                <img src="logomiraisoft.png" alt="MiraiSoft Logo">
-            </div>
-            <div class="loader-text">
-                <span class="japanese">読み込み中...</span>
-                <span class="spanish">Cargando...</span>
-            </div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
-            </div>
-            <div class="loader-circles">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </div>
-        </div>
-    </div>
+    <!-- Sakura Container -->
+    <div id="sakura-container"></div>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-inner">
+    <!-- Navigation -->
+    <nav id="navigation">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
                 <div class="logo">
-                    <img src="logomiraisoft.png" alt="MiraiSoft Logo">
+                    <div class="logo-icon">
+                        <span>コ</span>
+                    </div>
+                    <div class="logo-text">
+                        <div class="brand-name">KODAKASOFT</div>
+                        <div class="brand-japanese">コーダカソフト</div>
+                    </div>
                 </div>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
-                        <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
-                        <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
-                        <li class="nav-item"><a href="#portafolio" class="nav-link">Portafolio</a></li>
-                        <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
-                    </ul>
-                </nav>
-                <div class="menu-toggle">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-links">
+                    <a href="#hero" class="nav-link">
+                        <span>Inicio</span>
+                        <span class="nav-japanese">ホーム</span>
+                    </a>
+                    <a href="#services" class="nav-link">
+                        <span>Servicios</span>
+                        <span class="nav-japanese">サービス</span>
+                    </a>
+                    <a href="#team" class="nav-link">
+                        <span>Equipo</span>
+                        <span class="nav-japanese">チーム</span>
+                    </a>
+                    <a href="#portfolio" class="nav-link">
+                        <span>Portfolio</span>
+                        <span class="nav-japanese">作品集</span>
+                    </a>
+                    <a href="#contact" class="nav-link">
+                        <span>Contacto</span>
+                        <span class="nav-japanese">連絡先</span>
+                    </a>
                 </div>
+
+                <!-- CTA Button -->
+                <button class="cta-button">
+                    始めましょう
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobile-menu">
+                <a href="#hero" class="mobile-nav-link">
+                    <span>Inicio</span>
+                    <span>ホーム</span>
+                </a>
+                <a href="#services" class="mobile-nav-link">
+                    <span>Servicios</span>
+                    <span>サービス</span>
+                </a>
+                <a href="#team" class="mobile-nav-link">
+                    <span>Equipo</span>
+                    <span>チーム</span>
+                </a>
+                <a href="#portfolio" class="mobile-nav-link">
+                    <span>Portfolio</span>
+                    <span>作品集</span>
+                </a>
+                <a href="#contact" class="mobile-nav-link">
+                    <span>Contacto</span>
+                    <span>連絡先</span>
+                </a>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="inicio">
+    <section id="hero" class="hero">
+        <!-- Particles Canvas -->
+        <canvas id="particles-canvas"></canvas>
+        
+        <!-- Floating Circles -->
+        <div class="hero-background">
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+            <div class="floating-circle circle-4"></div>
+        </div>
+
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="gradient-text">MiraiSoft</span>
-                        <span class="japanese-subtitle">未来のウェブデザイン</span>
-                    </h1>
-                    <p class="hero-description">Creamos experiencias web futuristas que transforman tu visión en realidad digital</p>
-                    <p class="japanese-description">私たちは、あなたのビジョンをデジタルの現実に変える未来的なウェブ体験を作成します</p>
-                    <div class="hero-buttons">
-                        <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
-                        <a href="#contacto" class="btn btn-secondary">Solicitar Presupuesto</a>
-                    </div>
+                <!-- Badge -->
+
+
+                <!-- Title -->
+                <h1 class="hero-title">
+                    KODAKASOFT
+                </h1>
+                
+                <!-- Subtitle -->
+                <div class="hero-subtitle">
+                    Desarrollo Web Profesional
+                    <div class="subtitle-japanese">プロフェッショナルなウェブ開発</div>
                 </div>
-                <div class="hero-image">
-                    <div class="hero-image-container">
-                        <div class="floating-elements">
-                            <div class="floating-element fe-1"><i class="fas fa-code"></i></div>
-                            <div class="floating-element fe-2"><i class="fas fa-paint-brush"></i></div>
-                            <div class="floating-element fe-3"><i class="fas fa-mobile-alt"></i></div>
-                            <div class="floating-element fe-4"><i class="fas fa-search"></i></div>
-                            <div class="floating-element fe-5"><i class="fas fa-rocket"></i></div>
-                        </div>
-                        <div class="hero-device">
-                            <div class="device-screen">
-                                <div class="screen-content">
-                                    <div class="code-lines">
-                                        <div class="code-line"></div>
-                                        <div class="code-line"></div>
-                                        <div class="code-line"></div>
-                                        <div class="code-line"></div>
-                                        <div class="code-line"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                <!-- Description -->
+                <p class="hero-description">
+                    Creamos experiencias digitales únicas con la precisión y elegancia 
+                    de la filosofía japonesa. Cada línea de código es una obra de arte.
+                </p>
+
+                <!-- Buttons -->
+                <div class="hero-buttons">
+                    <button class="btn-primary">
+                        Comenzar Proyecto
+                        <span class="arrow">→</span>
+                    </button>
+                    <button class="btn-secondary">
+                        Ver Portfolio
+                        <span class="sparkle">✨</span>
+                    </button>
                 </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <div class="arrow">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+
+                <!-- Quote -->
+                <div class="hero-quote">
+                    <blockquote>
+                        "完璧は些細なことの集まりで達成される"
+                        <br>
+                        <em>La perfección se logra con la atención a los detalles</em>
+                    </blockquote>
                 </div>
             </div>
         </div>
-        <div class="hero-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
+            </div>
         </div>
     </section>
 
-    <!-- Servicios Section -->
-    <section class="services section" id="servicios">
+    <!-- Services Section -->
+    <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Nuestros Servicios <span class="japanese">サービス</span></h2>
-                <p class="section-subtitle">Soluciones digitales de vanguardia para tu negocio</p>
+                <div class="section-badge">サービス Services</div>
+                <h2>Nuestros Servicios</h2>
+                <p>Ofrecemos soluciones tecnológicas completas con la calidad y precisión japonesa</p>
             </div>
+
             <div class="services-grid">
-                <div class="service-card" data-aos="fade-up">
+                <!-- Web Development -->
+                <div class="service-card" data-delay="0">
                     <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                            <path d="M2 2l7.586 7.586"/>
+                            <circle cx="11" cy="11" r="2"/>
+                        </svg>
                     </div>
-                    <h3 class="service-title">Diseño Web</h3>
-                    <p class="service-description">Creamos sitios web modernos, responsivos y optimizados para SEO que destacan tu marca.</p>
-                    <p class="japanese-text">最新のレスポンシブウェブサイト</p>
+                    <h3>Desarrollo Web</h3>
+                    <p class="service-japanese">ウェブ開発</p>
+                    <p class="service-description">
+                        Sitios web modernos y responsivos utilizando las últimas tecnologías 
+                        y mejores prácticas de desarrollo.
+                    </p>
+                    <ul class="service-features">
+                        <li>React & TypeScript</li>
+                        <li>Diseño Responsivo</li>
+                        <li>Optimización SEO</li>
+                        <li>Performance Optimizada</li>
+                    </ul>
+                    <div class="service-cta">
+                        <span>Más información →</span>
+                    </div>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- UI/UX Design -->
+                <div class="service-card" data-delay="1">
                     <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
                     </div>
-                    <h3 class="service-title">Diseño Responsivo</h3>
-                    <p class="service-description">Experiencias perfectas en todos los dispositivos, desde móviles hasta pantallas de escritorio.</p>
-                    <p class="japanese-text">すべてのデバイスで完璧な体験</p>
+                    <h3>Diseño UI/UX</h3>
+                    <p class="service-japanese">デザイン</p>
+                    <p class="service-description">
+                        Experiencias de usuario intuitivas y atractivas inspiradas 
+                        en los principios del diseño minimalista japonés.
+                    </p>
+                    <ul class="service-features">
+                        <li>Prototipado Interactivo</li>
+                        <li>Design Systems</li>
+                        <li>Investigación UX</li>
+                        <li>Estética Japonesa</li>
+                    </ul>
+                    <div class="service-cta">
+                        <span>Más información →</span>
+                    </div>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+
+                <!-- E-commerce -->
+                <div class="service-card" data-delay="2">
                     <div class="service-icon">
-                        <i class="fas fa-search"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"/>
+                            <circle cx="20" cy="21" r="1"/>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                        </svg>
                     </div>
-                    <h3 class="service-title">Optimización SEO</h3>
-                    <p class="service-description">Mejoramos tu visibilidad en buscadores con estrategias SEO avanzadas.</p>
-                    <p class="japanese-text">検索エンジンでの可視性を向上</p>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
+                    <h3>E-commerce</h3>
+                    <p class="service-japanese">電子商取引</p>
+                    <p class="service-description">
+                        Tiendas online completas con sistemas de pago seguros 
+                        y gestión de inventario automatizada.
+                    </p>
+                    <ul class="service-features">
+                        <li>Shopify & WooCommerce</li>
+                        <li>Pasarelas de Pago</li>
+                        <li>Gestión de Inventario</li>
+                        <li>Analytics Avanzados</li>
+                    </ul>
+                    <div class="service-cta">
+                        <span>Más información →</span>
                     </div>
-                    <h3 class="service-title">Diseño UX/UI</h3>
-                    <p class="service-description">Interfaces intuitivas y atractivas que mejoran la experiencia del usuario.</p>
-                    <p class="japanese-text">直感的で魅力的なインターフェース</p>
                 </div>
             </div>
-        </div>
-        <div class="bg-shapes">
-            <div class="bg-shape bs-1"></div>
-            <div class="bg-shape bs-2"></div>
+
+            <!-- CTA Section -->
+            <div class="services-cta">
+                <div class="cta-card">
+                    <h3>¿Listo para comenzar tu proyecto?</h3>
+                    <p>始めましょう - Empecemos juntos</p>
+                    <button class="btn-white">
+                        Contactar Ahora
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Nosotros Section -->
-    <section class="about section" id="nosotros">
+    <!-- Team Section -->
+    <section id="team" class="team">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Nuestro Equipo <span class="japanese">チーム</span></h2>
-                <p class="section-subtitle">Conoce a los diseñadores detrás de MiraiSoft</p>
+                <div class="section-badge">チーム Team</div>
+                <h2>Nuestro Equipo</h2>
+                <p>Un equipo apasionado por la tecnología y la excelencia japonesa</p>
             </div>
+
             <div class="team-grid">
-                <div class="team-member" data-aos="fade-up">
-                    <div class="member-image">
-                        <div class="member-shape"></div>
-                        <div class="member-photo" style="background-image: url('https://via.placeholder.com/300x300')"></div>
+                <!-- Team Member 1 -->
+                <div class="team-card" data-delay="0">
+                    <div class="team-image">
+                        <img src="https://media.elcomercio.com/wp-content/uploads/2024/08/elon-musk-2-1024x683.jpg" alt="Akira Tanaka">
+                        <div class="team-overlay">
+                            <div class="team-info">
+                                <h3>Kento Terakawa</h3>
+                                <p>寺川顕翔 - Desarrollador Senior</p>
+                            </div>
+                            <div class="team-social">
+                                <button aria-label="LinkedIn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                        <rect x="2" y="9" width="4" height="12"/>
+                                        <circle cx="4" cy="4" r="2"/>
+                                    </svg>
+                                </button>
+                                <button aria-label="GitHub">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Kento Terakawa</h3>
-                        <p class="member-role">Director Creativo <span class="japanese">クリエイティブディレクター</span></p>
-                        <p class="member-description">Especialista en diseño de interfaces futuristas con un toque japonés único.</p>
-                        <div class="member-social">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                    <div class="team-content">
+                        <h4>Akira Tanaka</h4>
+                        <p class="team-role-japanese">フルスタック開発者</p>
+                        <p class="team-description">
+                            Especialista en React y Node.js con más de 8 años de experiencia 
+                            en desarrollo web y móvil.
+                        </p>
+                        <div class="team-skills">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Node.js</span>
+                            <span>AWS</span>
                         </div>
                     </div>
                 </div>
-                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-image">
-                        <div class="member-shape"></div>
-                        <div class="member-photo" style="background-image: url('https://via.placeholder.com/300x300')"></div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card" data-delay="1">
+                    <div class="team-image">
+                        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/HTPL3GNSWVGVZE3GRNZ3CTW5LM.jpg" alt="Yuki Sato">
+                        <div class="team-overlay">
+                            <div class="team-info">
+                                <h3>Benjamin Arevalos</h3>
+                                <p>- Diseñadora UX</p>
+                            </div>
+                            <div class="team-social">
+                                <button aria-label="LinkedIn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                        <rect x="2" y="9" width="4" height="12"/>
+                                        <circle cx="4" cy="4" r="2"/>
+                                    </svg>
+                                </button>
+                                <button aria-label="Dribbble">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Benjamin Arevalos</h3>
-                        <p class="member-role">Desarrollador Frontend <span class="japanese">フロントエンド開発者</span></p>
-                        <p class="member-description">Experto en crear animaciones fluidas y experiencias interactivas.</p>
-                        <div class="member-social">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
+                    <div class="team-content">
+                        <h4>Benjamin Arevalos</h4>
+                        <p class="team-role-japanese">UXデザイナー</p>
+                        <p class="team-description">
+                            Experta en experiencia de usuario con enfoque en diseño 
+                            centrado en el usuario y estética minimalista.
+                        </p>
+                        <div class="team-skills">
+                            <span>Figma</span>
+                            <span>Adobe XD</span>
+                            <span>Prototyping</span>
+                            <span>Research</span>
                         </div>
                     </div>
                 </div>
-                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
-                    <div class="member-image">
-                        <div class="member-shape"></div>
-                        <div class="member-photo" style="background-image: url('https://via.placeholder.com/300x300')"></div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card" data-delay="2">
+                    <div class="team-image">
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/usain-bolt-1652029110.jpg" alt="Hiroshi Yamamoto">
+                        <div class="team-overlay">
+                            <div class="team-info">
+                                <h3>Marcos Alvarez</h3>
+                                <p>- DevOps Engineer</p>
+                            </div>
+                            <div class="team-social">
+                                <button aria-label="LinkedIn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                        <rect x="2" y="9" width="4" height="12"/>
+                                        <circle cx="4" cy="4" r="2"/>
+                                    </svg>
+                                </button>
+                                <button aria-label="GitHub">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Marcos Alvarez</h3>
-                        <p class="member-role">Especialista SEO <span class="japanese">SEOスペシャリスト</span></p>
-                        <p class="member-description">Maestro en optimización para motores de búsqueda y análisis de datos.</p>
-                        <div class="member-social">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+                    <div class="team-content">
+                        <h4>Marcos Alvarez</h4>
+                        <p class="team-role-japanese">DevOpsエンジニア</p>
+                        <p class="team-description">
+                            Especialista en infraestructura cloud y automatización 
+                            de procesos de desarrollo y despliegue.
+                        </p>
+                        <div class="team-skills">
+                            <span>AWS</span>
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                            <span>CI/CD</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
-                    <h3 class="about-subtitle">Nuestra Filosofía <span class="japanese">私たちの哲学</span></h3>
-                    <p class="about-description">En MiraiSoft, combinamos la precisión y estética japonesa con tecnología de vanguardia para crear sitios web que no solo son visualmente impresionantes, sino también altamente funcionales y optimizados para SEO.</p>
-                    <p class="about-description">Nuestro nombre "Mirai" (未来) significa "futuro" en japonés, reflejando nuestra visión de estar siempre a la vanguardia del diseño web.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">100+</span>
-                            <span class="stat-label">Proyectos Completados</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">95%</span>
-                            <span class="stat-label">Clientes Satisfechos</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Años de Experiencia</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image" data-aos="fade-left">
-                    <div class="image-container">
-                        <div class="image-frame">
-                            <div class="image-content" style="background-image: url('https://via.placeholder.com/600x400')"></div>
-                        </div>
-                        <div class="image-decoration">
-                            <div class="decoration-element de-1"></div>
-                            <div class="decoration-element de-2"></div>
-                            <div class="decoration-element de-3"></div>
-                        </div>
-                    </div>
-                </div>
+
+            <!-- Team Quote -->
+            <div class="team-quote">
+                <blockquote>
+                    "一期一会 - Cada encuentro es único e irrepetible"
+                </blockquote>
+                <p>Nuestra filosofía de trabajo</p>
             </div>
         </div>
     </section>
 
-    <!-- Portafolio Section -->
-    <section class="portfolio section" id="portafolio">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Nuestro Portafolio <span class="japanese">ポートフォリオ</span></h2>
-                <p class="section-subtitle">Explora nuestros proyectos más destacados</p>
+                <div class="section-badge">作品集 Portfolio</div>
+                <h2>Nuestros Proyectos</h2>
+                <p>Una selección de nuestros trabajos más destacados</p>
             </div>
-            <div class="portfolio-filter">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="web">Diseño Web</button>
-                <button class="filter-btn" data-filter="mobile">Responsive</button>
-                <button class="filter-btn" data-filter="branding">Branding</button>
+
+            <!-- Portfolio Filters -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <span>Todos</span>
+                    <span class="filter-japanese">すべて</span>
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <span>Web</span>
+                    <span class="filter-japanese">ウェブ</span>
+                </button>
+                <button class="filter-btn" data-filter="ecommerce">
+                    <span>E-commerce</span>
+                    <span class="filter-japanese">EC</span>
+                </button>
+                <button class="filter-btn" data-filter="design">
+                    <span>Diseño</span>
+                    <span class="filter-japanese">デザイン</span>
+                </button>
             </div>
+
+            <!-- Portfolio Grid -->
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="web" data-aos="zoom-in">
+                <!-- Project 1 -->
+                <div class="portfolio-card" data-category="web" data-delay="0">
                     <div class="portfolio-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 1">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3 class="portfolio-title">Sitio Corporativo Futurista</h3>
-                                <p class="portfolio-category">Diseño Web</p>
-                                <a href="#" class="portfolio-link">Ver Proyecto</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="mobile" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="portfolio-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 2">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3 class="portfolio-title">Aplicación Web Responsiva</h3>
-                                <p class="portfolio-category">Responsive</p>
-                                <a href="#" class="portfolio-link">Ver Proyecto</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="branding" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="portfolio-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 3">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3 class="portfolio-title">Identidad Visual Japonesa</h3>
-                                <p class="portfolio-category">Branding</p>
-                                <a href="#" class="portfolio-link">Ver Proyecto</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="web" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="portfolio-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 4">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3 class="portfolio-title">E-commerce Moderno</h3>
-                                <p class="portfolio-category">Diseño Web</p>
-                                <a href="#" class="portfolio-link">Ver Proyecto</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="mobile" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="portfolio-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 5">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3 class="portfolio-title">Dashboard Interactivo</h3>
-                                <p class="portfolio-category">Responsive</p>
-                                <a href="#" class="portfolio-link">Ver Proyecto</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="branding" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="portfolio-image">
-                        <img src="https://via.placeholder.com/600x400" alt="Proyecto 6">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-info">
-                                <h3 class="portfolio-title">Branding Minimalista</h3>
-                                <p class="portfolio-category">Branding</p>
-                                <a href="#" class="portfolio-link">Ver Proyecto</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto Section -->
-    <section class="contact section" id="contacto">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contáctanos <span class="japanese">お問い合わせ</span></h2>
-                <p class="section-subtitle">Estamos listos para transformar tu visión en realidad</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info" data-aos="fade-right">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-text">
-                            <h3 class="info-title">Ubicación</h3>
-                            <p class="info-description">Avenida Digital 123, Ciudad Tecnológica</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-text">
-                            <h3 class="info-title">Email</h3>
-                            <p class="info-description">info@miraisoft.com</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="info-text">
-                            <h3 class="info-title">Teléfono</h3>
-                            <p class="info-description">+123 456 7890</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form-container" data-aos="fade-left">
-                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <input type="text" id="name" name="name" class="form-input" placeholder="Nombre" required>
-                                <label for="name" class="form-label">Nombre</label>
-                                <div class="input-border"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <input type="email" id="email" name="email" class="form-input" placeholder="Email" required>
-                                <label for="email" class="form-label">Email</label>
-                                <div class="input-border"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <select id="service" name="service" class="form-input" required>
-                                    <option value="" disabled selected>Selecciona un servicio</option>
-                                    <option value="web-design">Diseño Web</option>
-                                    <option value="responsive">Diseño Responsivo</option>
-                                    <option value="seo">Optimización SEO</option>
-                                    <option value="ux-ui">Diseño UX/UI</option>
-                                </select>
-                                <label for="service" class="form-label">Servicio</label>
-                                <div class="input-border"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <textarea id="message" name="message" class="form-input" placeholder="Mensaje" required></textarea>
-                                <label for="message" class="form-label">Mensaje</label>
-                                <div class="input-border"></div>
-                            </div>
-                        </div>
-                        <div class="form-submit">
-                            <button type="submit" class="submit-btn">
-                                <span class="btn-text">Enviar Mensaje</span>
-                                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Proyecto Web Moderno">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn" aria-label="Ver proyecto">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                            <button class="portfolio-btn" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
                             </button>
                         </div>
-                    </form>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Sakura Dashboard</h3>
+                        <p class="portfolio-japanese">桜ダッシュボード</p>
+                        <p class="portfolio-description">
+                            Dashboard administrativo con diseño minimalista japonés 
+                            y funcionalidades avanzadas de análisis de datos.
+                        </p>
+                        <div class="portfolio-tech">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>D3.js</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="portfolio-footer">
+                            <span class="portfolio-link">Ver más →</span>
+                            <span class="portfolio-category">Web App</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-card" data-category="ecommerce" data-delay="1">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" alt="E-commerce Japonés">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn" aria-label="Ver proyecto">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                            <button class="portfolio-btn" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Zen Store</h3>
+                        <p class="portfolio-japanese">禅ストア</p>
+                        <p class="portfolio-description">
+                            Tienda online de productos artesanales japoneses con 
+                            sistema de pago integrado y gestión de inventario.
+                        </p>
+                        <div class="portfolio-tech">
+                            <span>Next.js</span>
+                            <span>Stripe</span>
+                            <span>MongoDB</span>
+                            <span>Vercel</span>
+                        </div>
+                        <div class="portfolio-footer">
+                            <span class="portfolio-link">Ver más →</span>
+                            <span class="portfolio-category">E-commerce</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-card" data-category="design" data-delay="2">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&h=400&fit=crop" alt="Diseño Minimalista">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn" aria-label="Ver proyecto">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                            <button class="portfolio-btn" aria-label="Figma">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/>
+                                    <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/>
+                                    <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/>
+                                    <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/>
+                                    <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Kaizen Design System</h3>
+                        <p class="portfolio-japanese">改善デザインシステム</p>
+                        <p class="portfolio-description">
+                            Sistema de diseño completo basado en principios japoneses 
+                            de mejora continua y simplicidad elegante.
+                        </p>
+                        <div class="portfolio-tech">
+                            <span>Figma</span>
+                            <span>Storybook</span>
+                            <span>Tokens</span>
+                            <span>React</span>
+                        </div>
+                        <div class="portfolio-footer">
+                            <span class="portfolio-link">Ver más →</span>
+                            <span class="portfolio-category">Design System</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-card" data-category="web" data-delay="3">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="App Móvil">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn" aria-label="Ver proyecto">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                            <button class="portfolio-btn" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Mindful App</h3>
+                        <p class="portfolio-japanese">マインドフルアプリ</p>
+                        <p class="portfolio-description">
+                            Aplicación de meditación y mindfulness con ejercicios 
+                            guiados y seguimiento de progreso personal.
+                        </p>
+                        <div class="portfolio-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Audio</span>
+                            <span>Analytics</span>
+                        </div>
+                        <div class="portfolio-footer">
+                            <span class="portfolio-link">Ver más →</span>
+                            <span class="portfolio-category">Mobile App</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-card" data-category="ecommerce" data-delay="4">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop" alt="Marketplace">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn" aria-label="Ver proyecto">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                            <button class="portfolio-btn" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Artisan Marketplace</h3>
+                        <p class="portfolio-japanese">職人マーケットプレイス</p>
+                        <p class="portfolio-description">
+                            Marketplace para artesanos japoneses con sistema de 
+                            comisiones, reviews y pagos automatizados.
+                        </p>
+                        <div class="portfolio-tech">
+                            <span>Vue.js</span>
+                            <span>Laravel</span>
+                            <span>PayPal</span>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="portfolio-footer">
+                            <span class="portfolio-link">Ver más →</span>
+                            <span class="portfolio-category">Marketplace</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-card" data-category="design" data-delay="5">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=400&fit=crop" alt="Branding Japonés">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn" aria-label="Ver proyecto">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                            <button class="portfolio-btn" aria-label="Behance">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M8 8h8M8 12h8M8 16h8"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Wa Branding</h3>
+                        <p class="portfolio-japanese">和ブランディング</p>
+                        <p class="portfolio-description">
+                            Identidad visual completa para restaurante japonés 
+                            tradicional con elementos modernos y elegantes.
+                        </p>
+                        <div class="portfolio-tech">
+                            <span>Illustrator</span>
+                            <span>Photoshop</span>
+                            <span>InDesign</span>
+                            <span>Branding</span>
+                        </div>
+                        <div class="portfolio-footer">
+                            <span class="portfolio-link">Ver más →</span>
+                            <span class="portfolio-category">Branding</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Portfolio CTA -->
+            <div class="portfolio-cta">
+                <button class="btn-primary">
+                    Ver Todos los Proyectos
+                    <span class="arrow">→</span>
+                </button>
+            </div>
         </div>
-        <div class="contact-shapes">
-            <div class="contact-shape cs-1"></div>
-            <div class="contact-shape cs-2"></div>
-            <div class="contact-shape cs-3"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">連絡先 Contact</div>
+                <h2>Hablemos</h2>
+                <p>Estamos aquí para hacer realidad tu proyecto digital</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>Conectemos</h3>
+                    <p>
+                        Cada proyecto es una oportunidad de crear algo extraordinario. 
+                        Nos encantaría conocer tus ideas y ayudarte a materializarlas 
+                        con la precisión y elegancia japonesa.
+                    </p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon orange-gradient">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>hello@kodakasoft.com</p>
+                                <span>メール</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon sakura-gradient">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Teléfono</h4>
+                                <p>+34 123 456 789</p>
+                                <span>電話</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon sunset-gradient">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Ubicación</h4>
+                                <p>Madrid, España</p>
+                                <span>所在地</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-quote">
+                        <blockquote>
+                            "おもてなし - Hospitalidad sincera y atención al detalle"
+                        </blockquote>
+                        <p>Nuestro compromiso contigo</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="contact-form-header">
+                        <h3>Envíanos un mensaje</h3>
+                        <p>メッセージを送信してください</p>
+                    </div>
+
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Nombre</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Apellidos</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Empresa (opcional)</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Presupuesto</label>
+                            <select id="budget" name="budget" required>
+                                <option value="">Selecciona un rango</option>
+                                <option value="5k-10k">€5,000 - €10,000</option>
+                                <option value="10k-25k">€10,000 - €25,000</option>
+                                <option value="25k-50k">€25,000 - €50,000</option>
+                                <option value="50k+">€50,000+</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary form-submit">
+                            Enviar Mensaje
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <div class="contact-additional">
+                        <p>También puedes encontrarnos en:</p>
+                        <div class="contact-social">
+                            <button>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                                <span>LinkedIn</span>
+                            </button>
+                            <button>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                <span>GitHub</span>
+                            </button>
+                            <button>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
+                                </svg>
+                                <span>Dribbble</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logofooter.jpeg" alt="MiraiSoft Logo">
-                    <p class="footer-tagline">未来のウェブデザイン</p>
+            <!-- Main Footer -->
+            <div class="footer-main">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <span>コ</span>
+                        </div>
+                        <div>
+                            <h3>KODAKASOFT</h3>
+                            <p>コーダカソフト</p>
+                        </div>
+                    </div>
+                    
+                    <p class="footer-description">
+                        Creamos experiencias digitales extraordinarias combinando 
+                        tecnología moderna con la filosofía japonesa del perfeccionismo 
+                        y la atención al detalle.
+                    </p>
+                    
+                    <div class="footer-heart">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span>作られました 愛をこめて Made with love in Madrid</span>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>hello@kodakasoft.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>+34 123 456 789</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Madrid, España</span>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Links Columns -->
                 <div class="footer-links">
-                    <div class="footer-column">
-                        <h3 class="footer-title">Navegación</h3>
-                        <ul class="footer-menu">
-                            <li><a href="#inicio">Inicio</a></li>
-                            <li><a href="#servicios">Servicios</a></li>
-                            <li><a href="#nosotros">Nosotros</a></li>
-                            <li><a href="#portafolio">Portafolio</a></li>
-                            <li><a href="#contacto">Contacto</a></li>
+                    <!-- Services -->
+                    <div class="footer-section">
+                        <h4>Servicios</h4>
+                        <p class="footer-japanese">サービス</p>
+                        <ul>
+                            <li><a href="#services">Desarrollo Web</a></li>
+                            <li><a href="#services">Diseño UI/UX</a></li>
+                            <li><a href="#services">E-commerce</a></li>
+                            <li><a href="#services">Consultoría</a></li>
+                            <li><a href="#services">Mantenimiento</a></li>
                         </ul>
                     </div>
-                    <div class="footer-column">
-                        <h3 class="footer-title">Servicios</h3>
-                        <ul class="footer-menu">
-                            <li><a href="#servicios">Diseño Web</a></li>
-                            <li><a href="#servicios">Diseño Responsivo</a></li>
-                            <li><a href="#servicios">Optimización SEO</a></li>
-                            <li><a href="#servicios">Diseño UX/UI</a></li>
+
+                    <!-- Company -->
+                    <div class="footer-section">
+                        <h4>Empresa</h4>
+                        <p class="footer-japanese">会社</p>
+                        <ul>
+                            <li><a href="#team">Nuestro Equipo</a></li>
+                            <li><a href="#portfolio">Casos de Éxito</a></li>
+                            <li><a href="#contact">Trabaja con Nosotros</a></li>
+                            <li><a href="#about">Nuestra Historia</a></li>
+                            <li><a href="#blog">Blog</a></li>
                         </ul>
                     </div>
-                    <div class="footer-column">
-                        <h3 class="footer-title">Contacto</h3>
-                        <ul class="footer-contact">
-                            <li><i class="fas fa-map-marker-alt"></i> Avenida Digital 123, Ciudad Tecnológica</li>
-                            <li><i class="fas fa-envelope"></i> info@miraisoft.com</li>
-                            <li><i class="fas fa-phone-alt"></i> +123 456 7890</li>
+
+                    <!-- Resources -->
+                    <div class="footer-section">
+                        <h4>Recursos</h4>
+                        <p class="footer-japanese">リソース</p>
+                        <ul>
+                            <li><a href="#docs">Documentación</a></li>
+                            <li><a href="#support">Soporte Técnico</a></li>
+                            <li><a href="#privacy">Política de Privacidad</a></li>
+                            <li><a href="#terms">Términos de Servicio</a></li>
+                            <li><a href="#cookies">Política de Cookies</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <div class="newsletter-content">
+                    <h4>Newsletter</h4>
+                    <p>ニュースレター - Mantente al día con nuestras novedades</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="tu@email.com" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+
+            <!-- Bottom Footer -->
             <div class="footer-bottom">
-                <div class="copyright">
-                    <p>&copy; 2023 MiraiSoft. Todos los derechos reservados.</p>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 KODAKASOFT. Todos los derechos reservados.</p>
+                    <p class="footer-copyright-japanese">© 2024 コーダカソフト。全著作権所有。</p>
                 </div>
-                <div class="footer-social">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <div class="footer-legal">
+                    <a href="#privacy">Privacidad</a>
+                    <a href="#terms">Términos</a>
+                    <a href="#cookies">Cookies</a>
+                    <a href="#accessibility">Accesibilidad</a>
                 </div>
             </div>
-        </div>
-        <div class="footer-shapes">
-            <div class="footer-shape fs-1"></div>
-            <div class="footer-shape fs-2"></div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
